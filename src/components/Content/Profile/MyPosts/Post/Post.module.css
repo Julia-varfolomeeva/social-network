@@ -1,6 +1,6 @@
 
 .item{
-  color:green;
+  color:rgb(226, 227, 238);
 }
 
 
@@ -10,6 +10,6 @@
   border-radius: 50%;
 }
 .like{
-  color: rgb(99, 46, 134);
+  color: rgb(228, 205, 227);
   font-size: large;
 }

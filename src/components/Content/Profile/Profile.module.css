@@ -1,9 +1,14 @@
 .content{
   grid-area: c;
-  background-color: rgb(224, 235, 231);
+  padding-top: 20px;
+  color:white;
+ 
+
+ 
   
 }
 .content img{
   width: 100%;
   height: 250px;
+ 
 }

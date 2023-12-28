@@ -1,0 +1,49 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+}
+.dialogs_item {
+  display: grid;
+
+  color: rgb(224, 210, 228);
+  padding: 25px;
+  text-decoration: none;
+}
+.dialogs_item img {
+  width: 50px;
+}
+
+.dialog .activeLink {
+  color: rgb(177, 41, 82);
+}
+.dialog a {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 15px;
+  color: aliceblue;
+}
+.messages {
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.messages div {
+  background:   radial-gradient(rgb(240, 237, 237), rgb(35, 15, 48));
+  
+  height: 80%;
+  width: 80%;
+  border-radius: 25px;
+
+ 
+  
+}
+.message {
+  color: rgb(11, 4, 53);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

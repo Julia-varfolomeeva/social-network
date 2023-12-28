@@ -8,11 +8,11 @@
   "n c";
    grid-template-rows: 80px 1fr;
    grid-template-columns: 2.5fr 10fr;
-   background-color: rgb(139, 96, 209);
+   background-color:rgba(29, 10, 58, 0.95);
    
 }
 
 .app-wrapper-content{
-   background-color: rgb(139, 96, 209);
+   background-color:rgba(29, 10, 58, 0.95);
    padding: 0 50px;
 }

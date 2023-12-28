@@ -1,0 +1,11 @@
+.descriptionBlock {
+  padding: 20px;
+}
+.imgColor {
+  background-color: rgb(241, 241, 238);
+  border-radius: 20px;
+}
+
+.imgColor img {
+  height: 100px;
+}
