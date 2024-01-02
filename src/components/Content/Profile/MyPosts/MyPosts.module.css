@@ -7,9 +7,16 @@
   margin: 10px;
 }
 
-.textarea{
+.textarea textarea{
   margin-top: 10px;
+  height: 100px;
+  width: 350px;
 }
-.button{
+button{
   margin-top: 10px;
+  height: 40px;
+  width: 150px;
+  background-color: rgb(188, 139, 233);
+  color: azure;
+  border-radius: 20px;
 }

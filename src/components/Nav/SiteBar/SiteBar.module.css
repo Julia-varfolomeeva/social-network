@@ -1,0 +1,20 @@
+.siteBar{
+  font-size: 40px;
+}
+.items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 15px;
+
+
+  
+}
+.items img {
+  width: 100px;
+  padding-top: 10px;
+}
+.items div{
+  padding-right: 10px;
+  text-align: center;
+  
+}

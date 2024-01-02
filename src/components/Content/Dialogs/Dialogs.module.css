@@ -21,29 +21,50 @@
   grid-template-columns: 1fr 5fr;
   align-items: center;
   text-decoration: none;
-  margin-bottom: 15px;
+  margin-top: 20px;
   color: aliceblue;
 }
 .messages {
-  
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
 }
 .messages div {
-  background:   radial-gradient(rgb(240, 237, 237), rgb(35, 15, 48));
-  
-  height: 80%;
-  width: 80%;
-  border-radius: 25px;
+  background: radial-gradient(rgb(240, 237, 237), rgb(35, 15, 48));
 
- 
-  
+  min-height: 80%;
+  min-width: 80%;
+  border-radius: 25px;
+  margin-top: 20px;
+  min-block-size: 60px;
 }
 .message {
-  color: rgb(11, 4, 53);
+  color: rgb(41, 29, 116);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.textArea {
+  display: grid;
+}
+.textArea button {
+  margin-left: 20px;
+  margin-top: 25px;
+  width: 150px;
+  height: 50px;
+  background-color: #402155;
+  color: aliceblue;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.textArea textarea {
+  margin-left: 20px;
+  background-color: #c795e9;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 20px;
+  width: 350px;
+  height: 60px;
 }
