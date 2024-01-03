@@ -1,9 +1,11 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/state";
 
 const MyPosts = (props) => {
   let post = props.posts.map((p) => (
+
     <Post message={p.message} likeCount={p.likeCount} />
   ));
 
@@ -12,11 +14,11 @@ const MyPosts = (props) => {
   let addPosts = () => {
     // let text = newPostElement.current.value; // current- ссылается на нативный js и ищет его свойство value
 
-    props.dispatch({ type: "ADD-POST" });
+    props.dispatch(addPostActionCreator());
   };
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.dispatch({ type: "UPDATE-NEW-POST-TEXT", newText: text });
+    props.dispatch(updateNewPostTextActionCreator(text));
   };
 
   let Clear = () => {

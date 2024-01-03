@@ -1,4 +1,11 @@
- let store ={
+const ADD_POST="ADD-POST"
+const UPDATE_NEW_POST_TEXT= "UPDATE-NEW-POST-TEXT"
+const SEND_MESSAGE='SEND-MESSAGE'
+const UPDATE_NEW_MESSAGE_TEXT='UPDATE-NEW-MESSAGE-TEXT'
+
+
+
+let store ={
   _state :{
   
   profilePage: {
@@ -95,7 +102,7 @@ subscribe (observer) {
 },
 
 dispatch(action){ // action-это объект, какое то действие,которое приходит сюда и у него есть type ="какая то строка"
- if ( action.type === 'ADD-POST') {// 'ADD-POST' как методб пишем большими буквами
+ if ( action.type === ADD_POST) {// 'ADD-POST' как методб пишем большими буквами
   let NewPost = { // у этого метода нет атрибута для принятия
     id: 6,
     message: this._state.profilePage.newPostText,
@@ -106,11 +113,11 @@ dispatch(action){ // action-это объект, какое то действи�
   this._callSubscriber(this._state);
 
 } 
-else if(action.type === 'UPDATE-NEW-POST-TEXT'){
+else if(action.type === UPDATE_NEW_POST_TEXT){
    this._state.profilePage.newPostText = action.newText; // этот метод принимал атрибут newText
   this._callSubscriber(this._state);
 }
-else if (action.type === 'SEND-MESSAGE'){
+else if (action.type === SEND_MESSAGE){
   let NewMessage = {
     id: 6,
     message: this._state.dialogPage.newMessageText,
@@ -128,13 +135,28 @@ else if (action.type === 'SEND-MESSAGE'){
 
   this._callSubscriber(this._state);
 } 
-else if(action.type === 'UPDATE-NEW-MESSAGE-TEXT'){
+else if(action.type === UPDATE_NEW_MESSAGE_TEXT){
   this._state.dialogPage.newMessageText = action.newMessage;
   this._callSubscriber(this._state);
 }
 }
 
  }
+
+ export const addPostActionCreator = () => {
+  return { type: ADD_POST };
+};
+
+export const updateNewPostTextActionCreator = (text) => {
+  return { type: UPDATE_NEW_POST_TEXT, newText: text };
+};
+export const addMessageActionCreator = () => {
+  return { type: SEND_MESSAGE };
+};
+
+export const updateNewMessageTextActionCreator = (message) => {
+  return { type: UPDATE_NEW_MESSAGE_TEXT, newMessage: message};
+};
 
 
 export default store;
