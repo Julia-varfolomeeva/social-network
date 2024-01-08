@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Music from "./Music/Music";
 import News from "./News/News";
 import Profile from "./Profile/Profile";
+import DialogsContainer from "./Dialogs/Dialogs Container";
 
 const Content = (props) => {
   return (
@@ -16,17 +17,16 @@ const Content = (props) => {
           path="/profile/*"
           element={
             <Profile
-              profilePage={props.state.profilePage}
-              dispatch={props.dispatch}
+   
+              store={props.store}
             />
           }
         />
         <Route
           path="/dialogs/*"
           element={
-            <Dialogs
-             dialogPage={props.state.dialogPage}
-             dispatch={props.dispatch}
+            <DialogsContainer
+            store={props.store}
             />
           }
         />

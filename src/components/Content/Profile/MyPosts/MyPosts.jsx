@@ -1,24 +1,22 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/profile-reducer";
+
 
 const MyPosts = (props) => {
   let post = props.posts.map((p) => (
-
     <Post message={p.message} likeCount={p.likeCount} />
   ));
 
   let newPostElement = React.createRef(); //создаем ссылку
 
-  let addPosts = () => {
-    // let text = newPostElement.current.value; // current- ссылается на нативный js и ищет его свойство value
-
-    props.dispatch(addPostActionCreator());
+  let onAddPosts = () => {
+    props.addPosts();
   };
+
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.dispatch(updateNewPostTextActionCreator(text));
+    props.updateNewPostText(text);
   };
 
   let Clear = () => {
@@ -39,7 +37,7 @@ const MyPosts = (props) => {
         </div>
 
         <div className={classes.button}>
-          <button onClick={addPosts}>Add post</button>
+          <button onClick={onAddPosts}>Add post</button>
         </div>
       </div>
       <div className={classes.posts}>{post}</div>

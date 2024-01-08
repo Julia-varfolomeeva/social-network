@@ -11,6 +11,7 @@ const App = (props) => {
       <Header />
       <Nav state={props.state.siteBar} />
       <Content
+      store={props.store}
         state={props.state}
         dispatch={props.dispatch}
       />
